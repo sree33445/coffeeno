@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { use, useContext } from "react";
 import { CartContext } from "../context/CartContext";
 import { 
   ShoppingCart, 
@@ -14,6 +14,7 @@ import {
 } from "lucide-react";
 import "../css/cart.css";
 import { AuthContext } from "../context/AuthContext";
+import { useNavigate } from "react-router-dom";
 
 const Cart = () => {
   const { 
@@ -230,12 +231,18 @@ const Cart = () => {
     ],
   };
 
+  const navigate =useNavigate();
+
   // Get all menu items in a flat array
   const allMenuItems = [
     ...menuItems["espresso-based"],
     ...menuItems["cold-coffee"],
     ...menuItems["brewed-coffee"]
   ];
+
+  const goToMenu = () => {
+    navigate('/menu')
+  };
 
   const { user } = useContext(AuthContext);
 
@@ -334,7 +341,7 @@ const Cart = () => {
             <ShoppingCart className="empty-cart-icon" />
             <h2 className="empty-cart-title">Your cart is empty</h2>
             <p className="empty-cart-subtitle">Add some delicious coffee to get started ☕</p>
-            <button className="browse-menu-btn">
+            <button onClick={goToMenu} className="browse-menu-btn">
               <Coffee className="browse-icon" />
               Browse Menu
             </button>
