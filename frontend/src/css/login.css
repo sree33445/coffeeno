@@ -1,0 +1,431 @@
+/* Layout */
+.container {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #fef7cd 0%, #fed7aa 100%);
+}
+
+/* Header */
+.header {
+  background-color: white;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid #f3e8ff;
+}
+
+.headerContent {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+.headerFlex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 64px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo img {
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.logoText {
+  font-size: 24px;
+  font-weight: bold;
+  color: #92400e;
+}
+
+.headerRight {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.headerText {
+  color: #b45309;
+}
+
+.signUpButton {
+  color: #d97706;
+  font-weight: 500;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.hoverTextOrange:hover {
+  color: #b45309;
+}
+
+/* Main Content */
+.mainContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 48px 16px;
+  min-height: calc(100vh - 64px);
+}
+
+.maxWidth {
+  max-width: 1024px;
+  width: 100%;
+}
+
+.gridWrapper {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 32px;
+  align-items: center;
+  justify-items: center;
+  width: 100%;
+}
+
+@media (min-width: 1024px) {
+  .gridWrapper {
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .benefitsCard {
+    display: block;
+    justify-self: end;
+    margin-right: 20px;
+  }
+  
+  .formCard {
+    justify-self: start;
+    margin-left: 20px;
+  }
+}
+
+.benefitsCard {
+  display: none;
+  background-color: white;
+  border-radius: 16px;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  padding: 32px;
+  width: 100%;
+  max-width: 500px;
+}
+
+.benefitsHeader {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.benefitsIcon {
+  margin-bottom: 16px;
+}
+
+.benefitsTitle {
+  font-size: 30px;
+  font-weight: bold;
+  color: #78350f;
+  margin-bottom: 8px;
+}
+
+.benefitsSubtitle {
+  color: #d97706;
+  margin: 0;
+}
+
+.benefitsList {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.benefitItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.benefitIcon {
+  background-color: #fef3c7;
+  padding: 12px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.benefitTitle {
+  font-weight: 600;
+  color: #78350f;
+  margin-bottom: 4px;
+}
+
+.benefitText {
+  color: #d97706;
+  font-size: 14px;
+}
+
+.welcomeOffer {
+  margin-top: 32px;
+  padding: 16px;
+  background-color: #fef3c7;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.welcomeText {
+  color: #92400e;
+  font-weight: 500;
+  margin: 0;
+}
+
+/* Form */
+.formCard {
+  background-color: white;
+  border-radius: 16px;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  padding: 32px;
+  width: 100%;
+  max-width: 500px;
+}
+
+.formHeader {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.formTitle {
+  font-size: 24px;
+  font-weight: bold;
+  color: #78350f;
+  margin-bottom: 8px;
+}
+
+.formSubtitle {
+  color: #d97706;
+  margin: 0;
+}
+
+.formContent {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.inputGroup {
+  display: flex;
+  flex-direction: column;
+}
+
+.label {
+  display: block;
+  font-size: 14px;
+  font-weight: 500;
+  color: #92400e;
+  margin-bottom: 8px;
+}
+
+.input {
+  width: 100%;
+  padding: 12px 16px;
+  border: 1px solid #fbbf24;
+  border-radius: 8px;
+  font-size: 16px;
+  transition: all 0.2s;
+  outline: none;
+  box-sizing: border-box;
+}
+
+.input:focus {
+  border-color: #f59e0b;
+  box-shadow: 0 0 0 2px rgba(245, 158, 11, 0.2);
+}
+
+.passwordContainer {
+  position: relative;
+}
+
+.passwordInput {
+  width: 100%;
+  padding: 12px 48px 12px 16px;
+  border: 1px solid #fbbf24;
+  border-radius: 8px;
+  font-size: 16px;
+  transition: all 0.2s;
+  outline: none;
+  box-sizing: border-box;
+}
+
+.passwordInput:focus {
+  border-color: #f59e0b;
+  box-shadow: 0 0 0 2px rgba(245, 158, 11, 0.2);
+}
+
+.eyeButton {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #d97706;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.eyeButton:hover {
+  color: #b45309;
+}
+
+/* Login specific styles */
+.loginOptions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.checkboxItem {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.checkbox {
+  height: 16px;
+  width: 16px;
+  accent-color: #d97706;
+  flex-shrink: 0;
+}
+
+.checkboxLabel {
+  font-size: 14px;
+  color: #b45309;
+  line-height: 1.4;
+}
+
+.forgotPassword {
+  color: #d97706;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  text-decoration: underline;
+}
+
+.forgotPassword:hover {
+  color: #b45309;
+}
+
+/* Buttons */
+.submitButton {
+  width: 100%;
+  background-color: #d97706;
+  color: white;
+  padding: 12px 16px;
+  border-radius: 8px;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.2s;
+}
+
+.hoverDarkenOrange:hover {
+  background-color: #b45309;
+}
+
+/* Divider */
+.divider {
+  position: relative;
+  margin: 24px 0;
+}
+
+.dividerLine {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+}
+
+.dividerBorder {
+  width: 100%;
+  border-top: 1px solid #fbbf24;
+}
+
+.dividerText {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  font-size: 14px;
+  padding: 0 8px;
+  background-color: white;
+  color: #d97706;
+}
+
+/* Social */
+.socialGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.socialButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 8px 16px;
+  border: 1px solid #fbbf24;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #b45309;
+  background-color: white;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.hoverYellow:hover {
+  background-color: #fef3c7;
+}
+
+.socialIcon {
+  width: 20px;
+  height: 20px;
+  margin-right: 8px;
+}
+
+/* Signup prompt */
+.signupPrompt {
+  text-align: center;
+  margin-top: 16px;
+}
+
+.signupPrompt p {
+  color: #b45309;
+  font-size: 14px;
+  margin: 0;
+}
+
+.signupLink {
+  color: #d97706;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  text-decoration: underline;
+  font-weight: 500;
+}
+
+.signupLink:hover {
+  color: #b45309;
+}
